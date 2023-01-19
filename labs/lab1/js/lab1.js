@@ -1,4 +1,11 @@
 /*
+Zane Smith
+January 19, 2023
+NewM-N220
+*/
+
+
+/*
 Cat drawing
 Algo:
    1.) create Setup function & use it to:
