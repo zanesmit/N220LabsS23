@@ -30,11 +30,16 @@
 
 
 
-let Eyes = {
-    x: 500,
-    y: 250,
-    radius: 50,
-    color: [9, 34, 249]
+let Features = {
+    eyeX: 500,
+    eyeY: 250,
+    eyeRadius: 50,
+    eyeColor: [9, 34, 249],
+    mouthX: 500,
+    mouthY: 400,
+    mouthWidth: 200,
+    mouthHeight: 50,
+    mouthColor: [30, 239, 10]
   };
 
 
@@ -51,10 +56,9 @@ function draw(){
     circle(500, 300, 400);
 
     //draw mouth
-    fill(30, 239, 10);
-    ellipse(500, 300 + 100, 200, 50);
+ 
 
-  drawEyes(Eyes);
+  drawFeatures(Features);
 
 
 
@@ -64,11 +68,14 @@ function draw(){
 
 
 
-function drawEyes(Eyes){
+function drawFeatures(Features){
 
 
-    fill(Eyes.color);
-    circle(Eyes.x - 50, Eyes.y, Eyes.radius);
-    circle(Eyes.x + 50, Eyes.y, Eyes.radius);
+    fill(Features.eyeColor);
+    circle(Features.eyeX - 50, Features.eyeY, Features.eyeRadius);
+    circle(Features.eyeX + 50, Features.eyeY, Features.eyeRadius);
+       
+    fill(Features.mouthColor);
+    ellipse(Features.mouthX, Features.mouthY, Features.mouthWidth, Features.mouthHeight);
 
 }
