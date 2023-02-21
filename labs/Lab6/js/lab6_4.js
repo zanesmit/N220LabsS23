@@ -11,9 +11,6 @@
 //For instance, one line in the div might say, "Pizza, is one of my favorite things."
  
 
-
-
-
 /*Algo:
     1.)create array of fav things 
     2.) create div in html
