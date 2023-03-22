@@ -1,15 +1,27 @@
-// Define a function that may throw an exception
-function divide(a, b) {
-  if (b === 0) {
-    throw new Error("Cannot divide by zero!");
+var counter = 0;
+
+while (true) {
+  console.log("This loop will run until counter reaches 10!"); // This statement will execute on every iteration of the loop
+  counter++; // Increment the counter variable on each iteration
+  if (counter === 10) {
+    break; // If the counter reaches 10, break out of the loop
   }
-  return a / b;
 }
 
-// Call the function within a try-catch block to catch the exception
-try {
-  let result = divide(10, 5);
-  console.log(result);
-} catch (error) {
-  console.log("Caught an error:", error.message);
+
+let input = document.getElementById("input");
+
+
+let number = document.getElementById("number");
+
+
+
+function onClick(number){
+  let output = input.value;
+  for(let i =1; i<number.value; i++){
+    output += input.value;
+  }
+
+  console.log(output)
+
 }
