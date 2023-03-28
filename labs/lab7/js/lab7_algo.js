@@ -33,6 +33,4 @@ Algo:
     4.)Check to see if they match
         ->if yes, update div to "sucess"
         ->if no, update div to "fail"
-
- 
 */
