@@ -1,27 +1,37 @@
-var counter = 0;
+//Write a function that takes one argument, and returns a true if that argument is a vowel, and false if it is not. ( "a" would return true, "H" would not). 
+//Use stringName.toLocalUppercase() to ensure its always an uppercase character you are comparing to.
+//( push goal - consider how this can be done with a loop )
 
-while (true) {
-  console.log("This loop will run until counter reaches 10!"); // This statement will execute on every iteration of the loop
-  counter++; // Increment the counter variable on each iteration
-  if (counter === 10) {
-    break; // If the counter reaches 10, break out of the loop
+
+//let input = document.getElementById("input");
+
+
+function identifyVowel(letter){
+  letter = letter.toUpperCase();
+  if(letter == "A" ||letter == "E"||letter == "I"||letter == "O"||letter == "U" ){
+    return true;
   }
+  
+  return false;
 }
 
 
-let input = document.getElementById("input");
 
 
-let number = document.getElementById("number");
+function removeVowel(letter){
+  for(let i =0; i<letter.length(); i++){
+    let vowel = identifyVowel(letter[i]);
+    if( vowel ==true){
 
-
-
-function onClick(number){
-  let output = input.value;
-  for(let i =1; i<number.value; i++){
-    output += input.value;
+    }
+    
   }
 
-  console.log(output)
-
 }
+
+
+
+let word = "o";
+
+
+console.log(identifyVowel(word));

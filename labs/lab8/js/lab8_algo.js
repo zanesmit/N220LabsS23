@@ -4,7 +4,7 @@
 //NewM-N220
 
 
-/*                                              //Lab 8.1 Is Divisible By Seven
+/*                                              Lab 8.1 Is Divisible By Seven
 Algo:
     1.) create an input field & a button in the html and give it an id
     2.) Create a div on the page that can later be updated
