@@ -21,7 +21,7 @@ Write a loop that creates three divs based on the data in the array. You should 
  
 
 /*Algo:
-    1.)loop through the array of objects and stile the div basted on the objects variables
+    1.)loop through the array of objects and style the div basted on the objects variables
 */
  
 let objects = [
@@ -30,13 +30,13 @@ let objects = [
     { color: "#ff0000", height: 300, width: 100 },
    ];
    
-   let container = document.getElementById("result"); // assuming there's a container element in the HTML
+   let result = document.getElementById("result"); 
    
-   for (let i = 0; i < objects.length; i++) {
-     let obj = objects[i];
-     let div = document.createElement("div");
-     div.style.backgroundColor = obj.color;
+   for (let i = 0; i < objects.length; i++) {   //loop for each obj in the array
+     let obj = objects[i];        
+     let div = document.createElement("div");     //create div
+     div.style.backgroundColor = obj.color;   //style
      div.style.height = obj.height + "px";
      div.style.width = obj.width + "px";
-     container.appendChild(div);
+     result.appendChild(div);   //add
    }
