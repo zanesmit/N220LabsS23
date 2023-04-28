@@ -9,6 +9,9 @@ let correctGuesses = 0;
 let randomNum = Math.floor(Math.random() * 10);
 let WORD =possibleWords[randomNum];
 
+//boolean to track win staus for win animation
+let win = false;
+
 //Add event listerner to each button
 let buttons = document.getElementsByTagName("button");
 for(let i = 0; i<buttons.length; i++){
@@ -109,9 +112,11 @@ function setup(){
 function drawer(){
     //if user wins
     if(correctGuesses ==WORD.length){
-        background(0, 255, 0);
-        textSize(50);
-        text("YOU WIN!!!!!!!!", 300, 200);
+        //background(0, 255, 0);
+        //textSize(50);
+        win = true;
+        draw();
+        //text("YOU WIN!!!!!!!!", 300, 200);
         //disable buttons if user wins
         for(let i = 0; i<buttons.length; i++){
             buttons[i].disabled = true;
@@ -237,20 +242,33 @@ function tryAgain() {
 
 
 
+let angle = 0;
 
-
-let win = false;
-
-
-
-
-
+//win animation
 function draw() {
     if (win ==true) {
-    
-    
-    
+        background(0, 255, 0);
+        translate(width/2, height/2);
+        rotate(angle);
+        textSize(64);
+        fill(0);
+        text("YOU WIN!", -100, 0);
+        angle += 0.1;
     }
 }
 
 
+/* ALGO 
+    1.) Create an array of 10 Random words  
+        -> get a randowm word from the array 
+    2.) create a global var to track the # of guesses & # of incorrect guesses  
+    3.)Create buttons on the html page for each letter, 
+        ->add onclick function to each letter that checks if that letter is contained in random word
+                ->if it is, display letter in correct location of word
+                ->if not, draw a piece of the hangman and add one to # of guesses
+        -> if user clicks a button, disable it so that letter can not be guessed again
+    4.) if #of incorrect guesses = 7, use p5 to display a losing screen, and display the correct word  
+            ->or if # of correct guesses = # of letters in the word, then draw win screen
+    5.) create a spot to display the correct letters that have been guessed 
+    6.)after game is over, add play again button 
+    */
